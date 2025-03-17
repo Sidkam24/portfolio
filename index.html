@@ -23,7 +23,7 @@
             </nav>
         </header>
         <div class="title top-ttl">
-            <h1><span class="textanimation">Kazuki　Murao</h1>
+            <h1><span class="textanimation title_text">Kazuki　Murao</h1>
         </div>
     </div>
     <section class="about" id="about">
@@ -73,26 +73,31 @@
 
     <section class="contact" id="contact">
         <h2 class="sub_title">Contact</h2>
-        <div class="row">
+        <form action="" class="row">
             <div class="item">
                 <div class="indicate">Your Name</div>
-                <input type="text" class="form_name" name="name">
+                <input type="text" class="form_name form" id="form" name="name">
             </div>
             <div class="item">
                 <div class="indicate">Your Email</div>
-                <input type="text" class="form_email" name="email">
+                <input type="text" class="form_email form" id="form" name="email">
             </div>
             <div class="item">
                 <div class="indicate msg_indicate">Message</div>
-                <textarea class="form_msg" name="msg" cols="30" rows="10"></textarea>
+                <textarea class="form_msg" id="form" name="msg" cols="30" rows="12"></textarea>
             </div>
-            <input id="submit" type="submit" value="送信"> 
-        </div>
+            <div class="submit_msg">
+                <input type="submit" class="input_submit_msg" value="送信">
+            </div>
+        </form>
 
     </section>
 
     <div id="cursor"></div>
-
+   
+<script src="https://kit.fontawesome.com/13f59f4f0c.js" crossorigin="anonymous"></script>
+<script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+<script src="./js/contact.js"></script>   
 <script src="./js/animation.js"></script>   
 </body>
 </html>
