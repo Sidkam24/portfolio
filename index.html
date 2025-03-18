@@ -1,90 +1,103 @@
-<<<<<<< HEAD
 <!DOCTYPE html>
 <html lang="ja">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Kazuki's Portfolio</title>
     <!-- Animate.css -->
+    <link rel="icon" href="/img/favicon.png">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
     <link rel="stylesheet" href="css/style.css">
-    
+    <script src="https://unpkg.com/scrollreveal"></script>
 </head>
 <body>
-        <div class="head">
-            <header>
-                <nav class="header_nav">
-                    <ul>
-                        <li><a href="#">About</a></li>
-                        <li><a href="#">Skill</a></li>
-                        <li><a href="#">Works</a></li>
-                        <li><a href="#">Contact</a></li>
-                    </ul>
-                </nav>
-            </header>
-            <div class="title top-ttl">
-                <h1><span class="textanimation">Tahara</h1>
+    <div class="head">
+        <header>
+            <nav class="header_nav">
+                <ul>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#works">Works</a></li>
+                    <li><a href="#skill">Skill</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+        </header>
+        <div class="title top-ttl">
+            <h1><span class="textanimation title_text">Kazuki　Murao</h1>
+        </div>
+    </div>
+    <section class="about" id="about">
+        <h2 class="sub_title">About</h2>
+        <div class="container">
+            <div class="profile">
+                <img src="/img/myFace.png" alt="myFace">
+                <p class="profile_name">Kazuki Murao</p>
+                <p class="birth">1996年8月17日生まれ</p>
+            </div>
+            <div class="profile_article">
+                エンジニアになりたいKazukiです。<br>
+                福岡教育大学で小中高の教員免許を取得し、中学校技術科教員になる。<br>
+                大学での専門は情報で、JavaScriptやjQuery、PHPを学び、<br>
+                音声認識合成機能を用いた英会話Webアプリを開発。<br>
+                そのアプリの開発や実用化の研究を学会で全国発表をした経験もある。<br>
+                教員時代では、ICT主任をしたり、プログラミングを子どもに教えたりした。<br>
+                また、授業では、自作のタイピングアプリを使い生徒のタイピングスキルの向上を目指したり、
+                独自の予想問題サイトで、テスト対策を行い、Formsでタブレットを使ったテストを実施したりした。
+                もともと情報が専門分野であったため、30歳までにはIT業界へ進むと決意していた。
             </div>
         </div>
-        <section class="section">
-
-        </section>
-
-    
-        <div id="cursor"></div>
-   
- <!-- jQuery -->
-<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-<!-- Lettering.js -->
-<script src="./js/jquery.lettering.js"></script>
-<!-- Textillate.js -->
-<script src="./js/jquery.textillate.js"></script>
-<script src="./js/script.js"></script>
-</body>
-=======
-<!DOCTYPE html>
-<html lang="ja">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <!-- Animate.css -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
-    <link rel="stylesheet" href="css/style.css">
-    
-</head>
-<body>
-        <div class="head">
-            <header>
-                <nav class="header_nav">
-                    <ul>
-                        <li><a href="#">About</a></li>
-                        <li><a href="#">Skill</a></li>
-                        <li><a href="#">Works</a></li>
-                        <li><a href="#">Contact</a></li>
-                    </ul>
-                </nav>
-            </header>
-            <div class="title top-ttl">
-                <h1><span class="textanimation">Tahara</h1>
+    </section>
+    <section class="Works" id="works">
+        <h2 class="sub_title">Works</h2>
+        <div class="container">
+            <div class="card">
+                <a class="works_link" href="https://rikei-labo.com/typing/index.html">
+                    <img class="works_img" src="/img/site/typing_site.png" alt="">
+                    <p class="works_title">ランキング付きタイピングゲーム</p>
+                </a>
+            </div>
+            <div class="card">
+                <a class="works_link" href="https://rikei-labo.com/app/quiz/kuizu.html">
+                    <img class="works_img" src="/img/site/quiz_english.png" alt="">
+                    <p class="works_title">音声認識合成機能を用いた英会話アプリ</p>
+                </a>
+            </div>
+            <div class="card">
+                <a class="works_link" href="https://rikei-labo.com/sample/3/index.html">
+                    <img class="works_img" src="/img/site/quiz_yosou.png" alt="">
+                    <p class="works_title">技術予想問題</p>
+                </a>
             </div>
         </div>
-        <section class="section">
+    </section>
 
-        </section>
-        <section class="section">
-    
-        </section>
-    
-        <div id="cursor"></div>
+    <section class="contact" id="contact">
+        <h2 class="sub_title">Contact</h2>
+        <form action="" class="row">
+            <div class="item">
+                <div class="indicate">Your Name</div>
+                <input type="text" class="form_name form" id="form" name="name">
+            </div>
+            <div class="item">
+                <div class="indicate">Your Email</div>
+                <input type="text" class="form_email form" id="form" name="email">
+            </div>
+            <div class="item">
+                <div class="indicate msg_indicate">Message</div>
+                <textarea class="form_msg" id="form" name="msg" cols="30" rows="12"></textarea>
+            </div>
+            <div class="submit_msg">
+                <input type="submit" class="input_submit_msg" value="送信">
+            </div>
+        </form>
+
+    </section>
+
+    <div id="cursor"></div>
    
- <!-- jQuery -->
-<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-<!-- Lettering.js -->
-<script src="./js/jquery.lettering.js"></script>
-<!-- Textillate.js -->
-<script src="./js/jquery.textillate.js"></script>
-<script src="./js/script.js"></script>
+<script src="https://kit.fontawesome.com/13f59f4f0c.js" crossorigin="anonymous"></script>
+<script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+<script src="./js/contact.js"></script>   
+<script src="./js/animation.js"></script>   
 </body>
->>>>>>> origin/main
 </html>

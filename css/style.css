@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 @import url('https://fonts.googleapis.com/css2?family=EB+Garamond:ital@0;1&family=Geist+Mono:wght@100..900&display=swap');
 *{
   margin: 0;
@@ -13,8 +12,10 @@ body{
   background-size: cover;
   background-repeat: no-repeat;
   background-attachment: fixed;
-  animation: bodyfadeIn 3s ease 0s 1 normal;
-  -webkit-animation: bodyfadeIn 3s ease 0s 1 normal;
+  animation: bodyfadeIn 2s ease 0s 1 normal;
+  -webkit-animation: bodyfadeIn 2s ease 0s 1 normal;
+  font-family: "EB Garamond", serif;
+  color: #fff;
 }
 body::after{
   content:"";
@@ -24,15 +25,16 @@ body::after{
   width: 100%;
   min-height: 100vh;
   background-color: black;
-  opacity: 0.6;
-  z-index: -1;
+  opacity: 0.7;
+  z-index: -2;
 }
 .head{
-  position: absolute;
   height: 100vh;
   width: 100%;
+  position: relative;
   top:0px;
   left: 0px;
+  margin-bottom: 200px;
 }
 @keyframes bodyfadeIn {
   0% {opacity: 0}
@@ -48,7 +50,7 @@ body::after{
   left: 50%;
   transform: translate(-50%,-50%);
   color:#fff;
-  font-size: 2rem;
+  font-size: 3vw;
   white-space: nowrap;
   letter-spacing: 0.3rem;
   font-family: "EB Garamond", serif;
@@ -59,8 +61,9 @@ body::after{
 header{
   width: auto;
   height: 80px;
-  position: absolute;
+  position: fixed;
   right: 20px;
+  z-index: 1;
 }
 .header_nav{
   height: 100%;
@@ -106,7 +109,6 @@ header{
     transform: scale(1, 1);    /*ホバー後、x軸方向に1（相対値）伸長*/
     }
 
-
   @keyframes showTextFromBottom{
 0%{
    transform: translateY( 100% );
@@ -140,157 +142,230 @@ animation: showTextFromBottom 0.5s backwards;
   background-image: url('../img/soccerball.png');
   background-size: 20px;
   opacity: 1;
-}
-section{
-  position: absolute;
-  margin: 0 auto;
-  bottom:0;
-=======
-@import url('https://fonts.googleapis.com/css2?family=EB+Garamond:ital@0;1&family=Geist+Mono:wght@100..900&display=swap');
-*{
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-body{
-  background-image: url("../img/kyositu.jpg");
-  width: 100%;
-  height: 100vh;
-  position: relative;
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-attachment: fixed;
-  animation: bodyfadeIn 3s ease 0s 1 normal;
-  -webkit-animation: bodyfadeIn 3s ease 0s 1 normal;
-}
-body::after{
-  content:"";
-  position: fixed;
-  top:0px;
-  left:0px;
-  width: 100%;
-  min-height: 100vh;
-  background-color: black;
-  opacity: 0.6;
   z-index: -1;
 }
-.head{
-  position: absolute;
-  height: 100vh;
-  width: 100%;
-  top:0px;
-  left: 0px;
-}
-@keyframes bodyfadeIn {
-  0% {opacity: 0}
-  100% {opacity: 1}
-}
-@-webkit-keyframes bodyfadeIn {
-  0% {opacity: 0}
-  100% {opacity: 1}
-}
-.title{
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%,-50%);
-  color:#fff;
-  font-size: 2rem;
-  white-space: nowrap;
-  letter-spacing: 0.3rem;
-  font-family: "EB Garamond", serif;
-  font-optical-sizing: auto;
-  font-weight: 400;
-  font-style: normal;
-}
-header{
-  width: auto;
-  height: 80px;
-  position: absolute;
-  right: 20px;
-}
-.header_nav{
-  height: 100%;
-}
-.header_nav  ul{
-  display: flex;
-  height: 100%;
-}
-.header_nav ul li{
-  list-style: none;
-  display: flex;
-  align-items: center;
-  margin-right: 50px;
-}
-.header_nav ul li a{
-  height: auto;
-  font-size: 1.3rem;
-  text-decoration: none;
-  color:#fff;
-  letter-spacing: 0.3rem;
-  font-family: "EB Garamond", serif;
-  font-optical-sizing: auto;
-  font-weight: 400;
-  font-style: normal;
-  position: relative;
-}
-.header_nav ul li a::after {
-  background-color: antiquewhite; /* 下線の色 */
-  bottom: -1px; /* 要素の下端からの距離 */
-  content: ""; /* 要素に内容を追加 */
-  height: 1px; /* 下線の高さ */
-  left: 0; /* 要素の左端からの距離 */
-  position: absolute; /* 絶対位置指定 */
-  transform: scale(0, 1); /* 下線を横方向に0倍、縦方向に1倍に変形（非表示） */
-  transform-origin: left top; /* 変形の原点を左上に指定 */
-  transition: transform .3s; /* 変形をアニメーション化 */
-  width: 100%; /* 要素の幅 */
-  }
-  .header_nav ul li a:hover{
-    color:antiquewhite;
-  }
-  .header_nav ul li a:hover::after {
-    transform: scale(1, 1);    /*ホバー後、x軸方向に1（相対値）伸長*/
-    }
-
-
-  @keyframes showTextFromBottom{
-0%{
-   transform: translateY( 100% );
-
-}
-100%{
-    transform: translateY( 0px );
-}
-}
-.textanimation span{
-animation: showText 0.1s backwards;
-display: inline-block;
-letter-spacing: 6px;
-}
-.textanimation > span{
-overflow: hidden;
-}
-.textanimation > span > span{
-animation: showTextFromBottom 0.5s backwards;
-}
-#cursor{
-  pointer-events: none;
-  width:20px;
-  height: 20px;
-  background: rgba(0,0,0,0.5);
-  position: fixed;
-  top:-16px;
-  left:-16px;
-  border-radius: 50%;
-  transition: all 0.15s;
-  background-image: url('../img/soccerball.png');
-  background-size: 20px;
-  opacity: 1;
-}
 section{
-  position: absolute;
   margin: 0 auto;
   bottom:0;
->>>>>>> origin/main
+  /* height: 100vh; */
+  width: 80%;
+}
+.sub_title{
+  font-size: 4.5vw;
+  text-align: center;
+  padding: 120px 0;
+  color: #fff;
+  font-optical-sizing: auto;
+  font-weight: 500;
+  font-style: normal;
+  letter-spacing: 5px;
+}
+.container{
+  display: flex;
+  /* justify-content: center; */
+  flex-wrap: wrap;
+}
+.profile{
+  width: 34%;
+  text-align: center;
+}
+.profile_name{
+  margin-bottom: 10px;
+  font-size: 2vw;
+  letter-spacing: 3px;
+}
+.birth{
+  font-size: 1.2vw;
+  letter-spacing: 3px;
+}
+.profile img{
+  max-width: 320px;
+  border-radius: 100%;
+  margin-bottom: 10px;
+}
+.profile_article{
+  width: 65%;
+  font-size: 1.2vw;
+  letter-spacing: 2px;
+  line-height: 2.7rem;
+  font-weight: 450;
+  padding: 25px 35px;
+  background-color:rgba(255,255,255,0.1);
+  backdrop-filter: blur(10px);
+  border-radius: 20px;
+}
+.card{
+  padding: 30px;
+  text-align: center;
+  font-size: 1.5vw;
+}
+.card img{
+  height: 250px;
+  width: 420px;
+  margin-bottom: 20px;
+  object-fit: cover;
+  transition: transform .4s ease;
+  border-radius: 5px;
+}
+.card img:hover{
+  transform: scale(1.05,1.05);
+}
+.works_title{
+  transition: color 0.4s ease;
+}
+.card a img:hover + .works_title{
+  color:antiquewhite;
+}
+.card a{
+  color: #fff;
+  text-decoration: none;
+  cursor: pointer;
+}
+.row{
+  width: 80%;
+  height: 58%;
+  margin: 0 auto;
+  padding: 58px 30px;
+  background-color: rgba(255,255,255,1);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  border-radius: 25px;
+  margin-top: -50px;
+}
+.item{
+  text-align: center;
+  width: 100%;
+  margin: 0 auto;
+  position: relative;
+}
+.item:not(:last-child){
+  margin-bottom: 45px;
+}
+.indicate{
+  position: absolute;
+  left: 10%;
+  top:25%;
+  color: gray;
+  pointer-events: none;
+  transition: all 0.3s;
+}
+.item input{
+  height: 40px;
+  width: 80%;
+  border:none;
+  border-bottom: 1px solid black;
+  background-color: none;
+  padding-left:10px;
+  outline: none;
+  z-index: 2;
+}
+.form_msg{
+  width: 80%;
+  border:none;
+  border-bottom: 1px solid black;
+  background-color: none;
+  padding-left:10px;
+  outline: none;
+  z-index: 2;
+  padding-bottom: 2px;
+}
+.msg_indicate{
+  position: absolute;
+  left: 10%;
+  top:-1%;
+  pointer-events: none;
+}
+.plane_img{
+  font-size: 20px;
+  color: #000;
+}
+.submit_msg{
+  position: relative;
+	margin: auto;
+	padding: 12px 40px 12px 65px;
+	border-radius: 0.3rem;
+  border: none;
+	border-bottom: 5px solid #0686b2;
+	background: #27acd9;
+	color: #fff;
+  font-size: 1.2rem;
+  transition: all 0.3s;
+  letter-spacing: 5px;
+}
+.submit_msg:hover{
+  margin-top: 1px;
+	border-bottom: 1px solid #0686b2;
+	color: #fff;
+}
+.submit_msg::before{
+    content: "\f1d8";
+    position: absolute;
+    font-family: "Font Awesome 6 Free";
+    font-weight: 600;
+    left:22%;
+    top:30%;
+    /* margin-right: 1px;
+    margin-left: 40px; */
+    font-size: 18px;
+}
+.input_submit_msg{
+  background-color: #27acd9;
+  border: none;
+  color: #fff;
+  text-align: center;
+  font-size: 1.1rem;
+}
+.focus{
+  position: absolute;
+  left: 10%;
+  top:-45%;
+  font-size:0.8rem ;
+}
+.focus_msg{
+  position: absolute;
+  left: 10%;
+  top:-16%;
+  font-size:0.8rem ;
+}
+
+/* メディアクエリ */
+@media screen and (max-width:965px){
+  section{
+    width: 92%;
+  }
+  .container{
+    flex-direction: column;
+    justify-content: center;
+  }
+  .profile{
+    width:100%;
+  }
+  .profile_name{
+    width: 100%;
+  }
+  .birth{
+    width: 100%;
+  }
+  .profile img{
+
+  }
+  .profile_article{
+    margin-top: 50px;
+    width: 100%;
+    font-size: 13px;
+  }
+  .row{
+    width: 92%;
+    height: 4%;
+    margin: 0 auto;
+    padding: 30px 20px;
+    background-color: rgba(255,255,255,1);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    border-radius: 25px;
+    margin-top: -50px;
+    margin-bottom: 50px;
+  }
 }
