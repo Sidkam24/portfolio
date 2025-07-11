@@ -249,9 +249,15 @@ table{
   /* width: 48%; */
 }
 .table_container{
- border : 1px solid black;
+    display: block;
+  font-size: 1.4rem;
 }
-
+.table_container table td{
+  padding : 20px 15px;
+}
+.table_container table td img{
+  width: 80px;
+}
 
 .contact{
   margin-bottom: 50px;
