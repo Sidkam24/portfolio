@@ -3,10 +3,11 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  word-break: break-all;
 }
 body{
   background-image: url("../img/kyositu.jpg");
-  width: 100%;
+  max-width: 100%;
   height: 100vh;
   position: relative;
   background-size: cover;
@@ -16,6 +17,7 @@ body{
   -webkit-animation: bodyfadeIn 2s ease 0s 1 normal;
   font-family: "EB Garamond", serif;
   color: #fff;
+  overflow-x: hidden;
 }
 body::after{
   content:"";
@@ -37,7 +39,7 @@ body::after{
 }
 .head{
   height: 100vh;
-  width: 100%;
+  max-width: 100%;
   position: relative;
   top:0px;
   left: 0px;
@@ -66,7 +68,7 @@ body::after{
   font-style: normal;
 }
 header{
-  width: auto;
+  max-width: 100%;
   height: 80px;
   position: fixed;
   right: 20px;
@@ -77,7 +79,7 @@ header{
 }
 .header_nav{
   height: 100%;
-  width: 100%;
+  max-width: 100%;
 }
 .header_nav  ul{
   display: flex;
@@ -112,7 +114,7 @@ header{
   transform: scale(0, 1); /* 下線を横方向に0倍、縦方向に1倍に変形（非表示） */
   transform-origin: left top; /* 変形の原点を左上に指定 */
   transition: transform .3s; /* 変形をアニメーション化 */
-  width: 100%; /* 要素の幅 */
+  max-width: 100%; /* 要素の幅 */
   }
   .header_nav ul li a:hover{
     color:antiquewhite;
@@ -160,7 +162,7 @@ section{
   margin: 0 auto;
   bottom:0;
   /* height: 100vh; */
-  width: 80%;
+  max-width: 80%;
 }
 .sub_title{
   font-size: 4.5vw;
@@ -173,12 +175,14 @@ section{
   letter-spacing: 5px;
 }
 .container{
+  width: 100%;
   display: flex;
-  /* justify-content: center; */
   flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
 }
 .profile{
-  width: 34%;
+  max-width: 34%;
   text-align: center;
 }
 .profile_name{
@@ -196,7 +200,8 @@ section{
   margin-bottom: 10px;
 }
 .profile_article{
-  width: 65%;
+  margin: 0 auto;
+  max-width: 65%;
   font-size: 1.2vw;
   letter-spacing: 2px;
   line-height: 2.7rem;
@@ -207,13 +212,14 @@ section{
   border-radius: 20px;
 }
 .card{
-  padding: 30px;
+  padding: 1%;
+  width: 33%;
   text-align: center;
-  font-size: 1.5vw;
+  font-size: 1.3vw;
 }
 .card img{
-  height: 250px;
-  width: 420px;
+  height: 220px;
+  width: 100%;
   margin-bottom: 20px;
   object-fit: cover;
   transition: transform .4s ease;
@@ -234,7 +240,7 @@ section{
   cursor: pointer;
 }
 .row{
-  width: 80%;
+  max-width: 80%;
   height: 58%;
   margin: 0 auto;
   padding: 58px 30px;
@@ -372,19 +378,29 @@ html {
 
 /* メディアクエリ */
 @media screen and (max-width:965px){
+  body{
+    overflow-x: hidden;
+  }
   section{
     width: 92%;
   }
   .container{
     flex-direction: column;
     justify-content: center;
+    align-items: center;
+  }
+  .card{
+    width: 100%;
   }
   .card img{
-    width: 100%;
-    width: 420px;
+    width: 50%;
+    /* width: 420px; */
   }
   .profile{
     width:100%;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
   }
   .profile_name{
     width: 100%;
@@ -393,15 +409,28 @@ html {
     width: 100%;
   }
   .profile img{
-    width: 60%;
+    width: 50%;
   }
   .profile_article{
     margin-top: 50px;
-    width: 100%;
-    font-size: 13px;
+    width: 80%;
+    font-size: 2.4vw;
+    line-height: 6vh;
+    letter-spacing: 1px;
+    /* align-items: center; */
+    /* margin: 0 auto;
+    width: 65%;
+    font-size: 1.2vw;
+    letter-spacing: 2px;
+    line-height: 2.7rem;
+    font-weight: 450;
+    padding: 25px 35px;
+    background-color:rgba(255,255,255,0.1);
+    backdrop-filter: blur(10px);
+    border-radius: 20px; */
   }
   .row{
-    width: 92%;
+    /* width: 92%; */
     margin: 0 auto;
     padding: 30px 20px;
     background-color: rgba(255,255,255,1);
@@ -411,8 +440,14 @@ html {
     border-radius: 25px;
     margin-top: -50px;
     margin-bottom: 50px;
+    height: auto;
   }
   .submit_msg{
     margin-top: -20px;
+    width: auto;
+    font-size: 100%;
   }
+}
+
+@media screen and(max-width: 768px) {
 }
