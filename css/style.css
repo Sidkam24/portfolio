@@ -84,6 +84,8 @@ header{
 .header_nav{
   height: 100%;
   max-width: 100%;
+  display: flex;
+  align-items: center;
 }
 .header_nav  ul{
   display: flex;
@@ -131,10 +133,29 @@ header{
 0%{
    transform: translateY( 100% );
 
-}
+    }
 100%{
     transform: translateY( 0px );
+    }
+  }
+.hamburger{
+  width: 40px;
+  height: 40px;
+  color: white;
+  /* background-color: #fa23fa; */
+  display: none;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
+.hamburger div{
+  background-color: #ffffff;
+  height: 1.5px;
+  width: 30px;
+  margin-bottom: 8px;
+}
+.hamburger div:last-child{
+  margin-bottom: 0px;
 }
 .textanimation span{
 animation: showText 0.1s backwards;
@@ -281,7 +302,7 @@ table{
   margin-bottom: 50px;
 }
 .row{
-  max-width: 80%;
+  max-width: 70%;
   height: 58%;
   margin: 0 auto;
   padding: 58px 30px;
@@ -522,7 +543,7 @@ html {
   }
 
   .card img{
-    width: 100%;
+    width: 90%;
   }
 
   .profile_name{
@@ -570,8 +591,42 @@ html {
 }
 
 @media screen and (max-width:768px){
+  header{
+    width: 100vw;
+    height: 100vh;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+  }
+  .header_nav{
+    width: 100vw;
+    height: 100vh;
+  }
+  .header_nav ul{
+    /* display: none; */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    background-color: #CCCCCC;
+    text-align: center;
+    width: 100vw;
+    margin-left:0px;
+    padding: 0;
+
+  }
+    .header_nav ul li{
+    text-align: center;
+  }
   .header_nav ul li a{
+
     font-size: 1rem;
+  }
+  .hamburger{
+    position: absolute;
+    top: 20px;
+    right: 0px;
+    display:flex;
   }
     .profile_name{
     font-size: 1rem;
