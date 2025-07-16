@@ -87,7 +87,7 @@ header{
   display: flex;
   align-items: center;
 }
-.header_nav  ul{
+.header_ul{
   display: flex;
   height: 100%;
   align-items: center;
@@ -594,32 +594,49 @@ html {
   header{
     width: 100vw;
     height: 100vh;
-    text-align: center;
     justify-content: center;
     align-items: center;
   }
   .header_nav{
-    width: 100vw;
-    height: 100vh;
+    position: absolute;
+    left:20px;
   }
-  .header_nav ul{
-    /* display: none; */
-    display: flex;
+  .header_ul{
+    display: none;
     flex-direction: column;
     justify-content: space-around;
     align-items: center;
-    background-color: #CCCCCC;
-    text-align: center;
+    background-color: rgba(255, 228, 0.5);
     width: 100vw;
-    margin-left:0px;
-    padding: 0;
-
+  }
+  @keyframes circle {
+    from{
+      clip-path: circle(0%);
+    }
+    to{
+      clip-path: circle(71%);
+    }
+  }
+  @keyframes close-circle {
+    from{
+      clip-path: circle(71%);
+    }
+    to{
+      clip-path: circle(0%);
+    }
+  }
+  .nav_toggle{
+    display: flex;
+    animation: circle 1s forwards;
+  }
+    .header_nav ul{
+    display: none;
+    animation: close-circle 1s;
   }
     .header_nav ul li{
     text-align: center;
   }
   .header_nav ul li a{
-
     font-size: 1rem;
   }
   .hamburger{
