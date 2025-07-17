@@ -5,7 +5,7 @@ let hamburger_click_count = 0;
 $(".hamburger").on("click",function(){
     if (window.matchMedia('(max-width: 768px)').matches) {
     $(".hamburger").toggleClass("toggle");
-    $(".header_nav ul").css("display","flex");
+    $(".header_ul").css("display","flex");
     hamburger_click_count++;
     even_count = hamburger_click_count%2;
     if(even_count == 0){
@@ -39,15 +39,18 @@ $(window).resize(function(){
   if (window.matchMedia('(min-width:769px)').matches) {
     $(".header_nav ul").removeClass("nav_toggle_open");
     $(".header_nav ul").removeClass("nav_toggle_close");
+    $(".header_nav ul").css("display","flex");
     if(even_count == 0){
-        // $(".header_nav ul").css("display","none");
+        $(".header_nav ul").removeClass("header_ul");
     }
     $("header").css("z-index","3");
-}else{
+  }else{
     if(even_count == 0 ){
-    $("header").css("z-index","-1");
+        $(".header_nav ul").css("display","none");
+        $("header").css("z-index","-1");
     }
-}
+    $(".header_nav ul").addClass("header_ul");
+  }
 });
 
 });
