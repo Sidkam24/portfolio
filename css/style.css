@@ -111,10 +111,11 @@ header{
   position: relative;
 }
 .header_nav ul li a::after {
+  content: ""; /* 要素に内容を追加 */
   background-color: antiquewhite; /* 下線の色 */
   bottom: -1px; /* 要素の下端からの距離 */
-  content: ""; /* 要素に内容を追加 */
   height: 1px; /* 下線の高さ */
+  width: 100px;
   left: 0; /* 要素の左端からの距離 */
   position: absolute; /* 絶対位置指定 */
   transform: scale(0, 1); /* 下線を横方向に0倍、縦方向に1倍に変形（非表示） */
@@ -188,11 +189,12 @@ section{
   bottom:0;
   /* height: 100vh; */
   width: 85%;
+  margin-bottom: 160px;
 }
 .sub_title{
-  font-size: 4.5rem;
+  font-size: 4rem;
   text-align: center;
-  padding: 100px 0;
+  padding: 30px 0px 100px 0;
   color: #fff;
   font-optical-sizing: auto;
   font-weight: 500;
@@ -222,18 +224,18 @@ section{
   letter-spacing: 3px;
 }
 .profile img{
-  max-width: 80%;
+  max-width: 70%;
   border-radius: 100%;
   margin-bottom: 10px;
 }
 .profile_article{
   margin: 0 auto;
   max-width: 65%;
-  font-size: 1.2vw;
+  font-size: 1rem;
   letter-spacing: 2px;
   line-height: 2.7rem;
   font-weight: 450;
-  padding: 25px 35px;
+  padding: 15px 35px;
   background-color:rgba(255,255,255,0.1);
   backdrop-filter: blur(10px);
   border-radius: 20px;
@@ -291,6 +293,7 @@ table{
   display: flex;
   justify-content: space-around;
   align-items:flex-start;
+  flex-wrap: wrap;
   font-size: 1.1rem;
 }
 
@@ -298,11 +301,12 @@ table{
   display: block;
   /* font-family: sans-serif;
   -webkit-font-smoothing: antialiased; */
-  font-size: 115%;
+  font-size: 100%;
   overflow: auto;
   width: auto;
   border-radius: 15px;
   font-weight: 450;
+  padding:10px 0px;
 }
  .table_certification th {
     background-color: rgb(16, 114, 179);
@@ -317,18 +321,19 @@ table{
     color: rgb(111, 111, 111); */
     background-color: rgb(227, 222, 222);
     color: rgb(36, 36, 36);
-    padding: 30px 40px;
+    padding: 20px 40px;
   }
 
   .table_skill {
   display: block;
   /* font-family: sans-serif;
   -webkit-font-smoothing: antialiased; */
-  font-size: 115%;
+  font-size: 100%;
   overflow: auto;
   width: auto;
   border-radius: 15px;
   font-weight: 450;
+  padding:10px 0px;
 }
  .table_skill th {
     background-color: rgb(16, 114, 179);
@@ -341,10 +346,11 @@ table{
  .table_skill tr td {
     background-color: rgb(227, 222, 222);
     color: rgb(36, 36, 36);
-    padding: 15px 40px;
+    padding: 10px 40px;
+    margin: 0;
   }
   .table_skill td img{
-  width: 60px;
+  width: 52px;
 }
 .program_img{
   padding:0;
@@ -357,7 +363,7 @@ table{
   max-width: 70%;
   height: 58%;
   margin: 0 auto;
-  padding: 58px 30px;
+  padding: 30px 0px;
   background-color: rgba(255,255,255,1);
   display: flex;
   flex-direction: column;
@@ -412,22 +418,24 @@ table{
   font-size: 20px;
   color: #000;
 }
-
+textarea{
+  resize: none;
+}
 .submit_btn{
   display: inline-block;
   position: relative;
-	margin: auto;
+	margin:auto;
 	padding: 12px 40px 12px 65px;
 	border-radius: 0.3rem;
   border: none;
   box-shadow: 0 6px #0686b2;
 	color: #fff;
   font-size: 1.2em;
-
   letter-spacing: 5px;
   background: rgb(149,202,252);
   background: linear-gradient(270deg, rgba(149,202,252,1) 0%, rgba(107,182,255,1) 100%);
   transition:all 1s ease-in-out;
+  margin-top: -20px;
 }
 .submit_btn:hover{
   background: rgb(117,188,255);
@@ -479,14 +487,15 @@ html {
   position: fixed;
   right: 30px;
   bottom: 30px;
-  background: #fff;
-  border: solid 2px #000;
+  /* background: #fff; */
+  background: rgba(255, 228, 0, 0.8);
+  border: solid 1px #000;
   border-radius: 50%;
   display: flex;
   justify-content: center;
   align-items: center;
   z-index: 2;
-  visibility: hidden;
+  /* visibility: hidden; */
 }
 
 .pagetop__arrow {
@@ -623,7 +632,7 @@ html {
   }
   .row{
     margin: 0 auto;
-    padding: 20px 10px;
+    padding: 30px 10px;
     background-color: rgba(255,255,255,1);
     display: flex;
     justify-content: space-around;
@@ -676,6 +685,7 @@ html {
   width: auto;
   border-radius: 15px;
   font-weight: 450;
+  margin-top: 20px;
 }
  .table_skill th {
     background-color: rgb(16, 114, 179);
@@ -694,13 +704,11 @@ html {
   width: 50px;
 }
 
-  .submit_msg{
-    margin-top: -20px;
-    width: auto;
-    font-size: 100%;
-  }
   .submit_btn{
-  font-size: 1rem;
+   margin-top: -25px;
+   width: auto;
+   font-size: 100%;
+   font-size: 1rem;
   }
 }
 
@@ -710,6 +718,7 @@ html {
     height: 100vh;
     justify-content: center;
     align-items: center;
+    z-index: -1;
   }
   .header_nav{
     position: absolute;
@@ -743,9 +752,13 @@ html {
       clip-path: circle(0%);
     }
   }
-  .nav_toggle{
+  .nav_toggle_open{
     display: flex;
     animation: circle 1s forwards;
+  }
+  .nav_toggle_close{
+    display: flex;
+    animation: close-circle 1s forwards;
   }
     .header_nav ul{
     display: none;
@@ -754,12 +767,12 @@ html {
     text-align: center;
   }
   .header_nav ul li a{
-    font-size: 1rem;
+    font-size: 1.3rem;
   }
   .hamburger{
-    position: absolute;
+    position: fixed;
     top: 20px;
-    right: 0px;
+    right: 20px;
     display:flex;
     z-index: 10;
     transition: all 0.6s;
@@ -817,7 +830,10 @@ html {
     max-width: 100%;
     font-size: 2.5vw;
   }
-  
+  .pagetop {
+  height: 42px;
+  width: 42px;
+}
 }
 
 @media screen and (max-width:500px){
@@ -837,10 +853,11 @@ html {
     margin-top: -25px;
     font-size: 0.8rem;
   }
-  .form_msg{
-    z-index: 10;
-  }
- 
+   .pagetop {
+    right: 15px;
+  height: 40px;
+  width: 40px;
+}
 
 }
   

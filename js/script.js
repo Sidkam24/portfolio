@@ -1,44 +1,53 @@
-//タイトルテキストアニメーション
+//ハンバーガーメニュー
 $(function(){
-// const animationTargetElements = document.querySelectorAll(".textanimation");
-// for( let i =0; i < animationTargetElements.length; i++ ){
-//     const targetElement = animationTargetElements[i]
-//     texts = targetElement.textContent;
-//     textsArray = [];
-    
-//     targetElement.textContent = "";
-
-
-//     for(let j =0; j < texts.split("").length; j++){
-//     textsArray.push('<span><span style="animation-delay: '+ ((j+5) * 0.2) +'s" >' + texts.split("")[j] + '<span></span>')
-//     }
-//     for(let k =0; k < textsArray.length; k++){
-//         targetElement.innerHTML += textsArray[k];
-//     }
-// }
-// const cursor = document.getElementById("cursor");
-// document.addEventListener("mousemove",function(e){
-//     cursor.style.transform =  ` translate(${e.clientX}px,${e.clientY}px) ` 
-// });
 
 let hamburger_click_count = 0;
-//ハンバーガーメニュー
 $(".hamburger").on("click",function(){
+    if (window.matchMedia('(max-width: 768px)').matches) {
     $(".hamburger").toggleClass("toggle");
-    $(".header_nav ul").toggleClass("nav_toggle");
+    $(".header_nav ul").css("display","flex");
     hamburger_click_count++;
     even_count = hamburger_click_count%2;
     if(even_count == 0){
-        $(".header_nav ul").css("animation","close-circle 1s forwards");
+        $(".header_nav ul").removeClass("nav_toggle_open");
+        $(".header_nav ul").addClass("nav_toggle_close");
+            $("header").css("z-index","-1");
+             $("header").css("transition","z-index 4s");
     }else{
-        $(".header_nav ul").css("animation","circle 1s");
-        $(".header_nav ul").css("display","flex");
+        $(".header_nav ul").removeClass("nav_toggle_close");
+        $(".header_nav ul").addClass("nav_toggle_open");
+        $("header").css("z-index","3");
+        $("header").css("transition","none");
+
     }
+    }
+
 });
 $(".header_ul li a").on("click",function(){
-    $(".header_nav ul").css("animation","close-circle 1s forwards");
-    $(".hamburger").removeClass("toggle");
-    hamburger_click_count++;
+    if (window.matchMedia('(max-width: 768px)').matches) {
+        $(".header_nav ul").removeClass("nav_toggle_open");
+        $(".header_nav ul").addClass("nav_toggle_close");
+        $(".hamburger").removeClass("toggle");
+        $("header").css("z-index","-1");
+        $("header").css("transition","z-index 4s");
+        hamburger_click_count++;  
+    } 
+});
+//PCサイズのとき
+$(window).resize(function(){
+    even_count = hamburger_click_count % 2;
+  if (window.matchMedia('(min-width:769px)').matches) {
+    $(".header_nav ul").removeClass("nav_toggle_open");
+    $(".header_nav ul").removeClass("nav_toggle_close");
+    if(even_count == 0){
+        // $(".header_nav ul").css("display","none");
+    }
+    $("header").css("z-index","3");
+}else{
+    if(even_count == 0 ){
+    $("header").css("z-index","-1");
+    }
+}
 });
 
 });
