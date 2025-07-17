@@ -606,8 +606,12 @@ html {
     flex-direction: column;
     justify-content: space-around;
     align-items: center;
-    background-color: rgba(255, 228, 0.5);
+    background-color: rgb(210, 195, 0.5);
+    backdrop-filter: blur(10px);
     width: 100vw;
+  }
+  .header_nav ul li a{
+    font-size: 20px;
   }
   @keyframes circle {
     from{
@@ -631,7 +635,6 @@ html {
   }
     .header_nav ul{
     display: none;
-    animation: close-circle 1s;
   }
     .header_nav ul li{
     text-align: center;
@@ -644,8 +647,30 @@ html {
     top: 20px;
     right: 0px;
     display:flex;
+    z-index: 10;
+    transition: all 0.6s;
   }
-    .profile_name{
+  .top{
+    transition: all 0.6s;
+  }
+  .middle{
+    transition: all 0.4s;
+  }
+  .bottom{
+    transition: all 0.6s;
+  }
+  .toggle .top{
+    transition: all 0.6s;
+    transform: rotate(315deg) translateY(13px);
+  }
+   .toggle .middle{
+    opacity: 0;
+  }
+   .toggle .bottom{
+    transition: all 0.6s;
+    transform: rotate(-315deg) translateY(-13px);
+  }
+  .profile_name{
     font-size: 1rem;
     width: 100%;
   }
