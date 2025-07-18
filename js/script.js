@@ -53,4 +53,20 @@ $(window).resize(function(){
   }
 });
 
+//スクロールダウン
+//  document.addEventListener("DOMContentLoaded", () => {
+  const text = "SCROLL DOWN ";
+  const repeatedText = text.repeat(2);
+  const circleText = document.querySelector(".circle-text_02");
+  const totalChars = repeatedText.length;
+  const anglePerChar = 360 / totalChars;
+
+  for (let i = 0; i < totalChars; i++) {
+    const span = document.createElement("span");
+    span.textContent = repeatedText[i];
+    span.style.transform = `rotate(${i * anglePerChar}deg)`;
+    circleText.appendChild(span);
+  }
+// });
+
 });

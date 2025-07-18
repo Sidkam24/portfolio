@@ -33,3 +33,5 @@ ScrollReveal().reveal('.profile', { delay: 250, origin:"bottom" });
 ScrollReveal().reveal('.profile_article', { delay: 300, origin:"right"  });
 ScrollReveal().reveal('.card', { delay: 200, origin:"bottom" , interval : 200 });
 ScrollReveal().reveal('.row', { delay: 200, origin:"bottom" , interval : 200 });
+ScrollReveal().reveal('.table_certification', { delay: 200, origin:"bottom" , interval : 200 });
+ScrollReveal().reveal('.table_skill', { delay:350, origin:"right" , interval : 200 });
