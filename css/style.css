@@ -5,6 +5,9 @@
   box-sizing: border-box;
   word-break: break-all;
 }
+html{
+  overflow-x: hidden;
+}
 body{
   background-image: url("../img/kyositu.jpg");
   max-width: 100%;
