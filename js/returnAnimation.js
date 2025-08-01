@@ -1,3 +1,4 @@
+//スクロールトップ
 $(function () {
     const $pageTop = $(".pagetop");
     $(window).scroll(function () {

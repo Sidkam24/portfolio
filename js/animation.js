@@ -21,12 +21,10 @@ document.addEventListener("mousemove",function(e){
 
 });
 
-//トップページに戻るスクロールアニメーション
 
 
 //スクロールアニメーション
 ScrollReveal({ reset: true , distance : "60px" , duration : 2000 , delay:200});
-// ScrollReveal().reveal('.header_nav ul li', { delay: 300, origin:"left" , interval : 200 ,reset : false,duration:2000});
 ScrollReveal().reveal('.title_text', { delay: 200, origin:"bottom" });
 ScrollReveal().reveal('.sub_title', { delay: 200, origin:"left" });
 ScrollReveal().reveal('.profile', { delay: 250, origin:"bottom" });
