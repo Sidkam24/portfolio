@@ -25,8 +25,8 @@
 　　　使用技術：jQuery, JavaScript, HTML, CSS  
      
 ## 【使用言語と勉強していること】
-・React  
-・Next.js  
-・Tailwind CSS  
-・AWS関連  
-・応用情報技術者試験  
+　・React  
+　・Next.js  
+　・Tailwind CSS  
+　・AWS関連  
+　・応用情報技術者試験  
