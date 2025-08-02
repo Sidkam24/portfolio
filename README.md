@@ -23,5 +23,10 @@
        
 　・**[「技術予想問題アプリ」](https://rikei-labo.com/sample/3/index.html)**　[Githubリポジトリ](https://github.com/Sidkam24/Anticipation-questions)  
 　　　使用技術：jQuery, JavaScript, HTML, CSS  
+     
 ## 【使用言語と勉強していること】
 ・React  
+・Next.js  
+・Tailwind CSS  
+・AWS関連  
+・応用情報技術者試験  
