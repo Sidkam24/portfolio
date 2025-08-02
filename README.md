@@ -10,10 +10,11 @@
 　・サッカー部顧問として５年間指導した。  
 　・制作物すべて、実際に授業で活用した。
 
-## 【工夫点】
-　・レスポンシブを意識  
-　・個性を出すために、カーソルを動かす際サッカーボールが追従する  
- 
+## 【作成にあたり意識した点と工夫点】
+　　自身のポートフォリオサイトではレスポンシブルデザインやユーザビリティを重点的に置いたデザインとプログラムを意識した。    
+　　その他のタイピングアプリなどでは実際に生徒に使わせてフィードバックをすることで、次の改善につながった。  
+　　ランキング機能では、PHPで実装し、ニックネームなどを付ける際は禁止ワードをチェックすることを工夫した。
+   
 ## 【制作物】
 　・**[「ランキング付きタイピングゲーム」](https://rikei-labo.com/typing/index.html)**　[Githubリポジトリ](https://github.com/Sidkam24/typing)  
 　　　使用技術：PHP, jQuery, JavaScript, HTML, CSS  
@@ -23,7 +24,7 @@
        
 　・**[「技術予想問題アプリ」](https://rikei-labo.com/sample/3/index.html)**　[Githubリポジトリ](https://github.com/Sidkam24/Anticipation-questions)  
 　　　使用技術：jQuery, JavaScript, HTML, CSS  
-     
+  
 ## 【使用言語と勉強していること】
 　・React  
 　・Next.js  
