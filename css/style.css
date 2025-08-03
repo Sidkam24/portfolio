@@ -20,7 +20,7 @@ body{
   -webkit-animation: bodyfadeIn 2s ease 0s 1 normal;
   font-family: "EB Garamond", serif;
   color: #fff;
-  overflow-x: hidden;
+  /* overflow-x: hidden; */
 
 }
 
@@ -597,9 +597,6 @@ html {
 
 /* メディアクエリ */
 @media screen and (max-width:965px){
-  body{
-    overflow-x: hidden;
-  }
   .header_nav ul li a{
   font-size: 1rem;
   }
